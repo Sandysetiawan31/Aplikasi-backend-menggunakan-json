@@ -20,7 +20,7 @@ type JsonUserid struct {
 }
 
 func home(w http.ResponseWriter, r *http.Request) {
-	io.WriteString(w, "Welcome")
+	io.WriteString(w, "Welcome to sandy setiawan API")
 }
 
 func GetByUserid(w http.ResponseWriter, r *http.Request) {
@@ -29,7 +29,7 @@ func GetByUserid(w http.ResponseWriter, r *http.Request) {
 
 	jsonUser := map[string]JsonUserid{}
 
-	jsonFile, err := os.Open("json-HW.json")
+	jsonFile, err := os.Open("package.json")
 	if err != nil {
 		fmt.Println(err)
 	}
@@ -49,7 +49,7 @@ func GetByUsername(w http.ResponseWriter, r *http.Request) {
 
 	jsonUsers := map[string]JsonUserid{}
 
-	jsonFile, err := os.Open("json-HW.json")
+	jsonFile, err := os.Open("package.json")
 	if err != nil {
 		fmt.Println(err)
 	}
